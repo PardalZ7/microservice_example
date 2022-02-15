@@ -1,0 +1,27 @@
+image: java:17-jdk
+stages:
+  - build
+  - deploy
+build:
+  stage: build
+  script:
+    - ./gradlew assemble
+  artifacts:
+    paths:
+      - build/libs/*.jar
+    expire_in: 1 week
+  only:
+    - master
+deploy_staging:
+  stage: deploy
+  script:
+    - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/microservices-basic-example.git
+    - git push -f heroku HEAD:master
+    - echo “Deployed to Staging Server https://microservices-basic-example.herokuapp.com/"
+  environment:
+    name: staging
+    url: https://microservices-basic-example.herokuapp.com/
+  only:
+    - master
+after_script:
+  - echo “End CI”
