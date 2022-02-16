@@ -1,5 +1,9 @@
 image: openjdk:17-alpine
 
+before_script:
+  - apk update && apk add git
+  - git --version
+
 stages:
   - build
   - test
