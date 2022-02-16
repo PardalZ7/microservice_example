@@ -31,4 +31,9 @@ public class UserBillsResource {
         return ResponseEntity.ok().body(response);
     }
 
+    @GetMapping()
+    public ResponseEntity<String> simpleResponse() {
+        return ResponseEntity.ok().body("String response");
+    }
+
 }
