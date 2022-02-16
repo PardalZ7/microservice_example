@@ -7,13 +7,9 @@ stages:
 build:
   stage: build
   script:
-    - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/microservice-simple-example.git
-    - git push -f heroku HEAD:main
     - mvn clean build
 
 deploy:
   stage: deploy
   script:
-    - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/microservice-simple-example.git
-    - git push -f heroku HEAD:main
     - mvn compile
