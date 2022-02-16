@@ -1,11 +1,8 @@
 image: java:17-jdk
 
 build:
-  stage: build
+  stage: deploy
   script:
+    - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/microservice-simple-example.git
+    - git push -f heroku HEAD:main
     - mvn compile
-
-test:
-  stage: test
-  script:
-    - mvn clean test
