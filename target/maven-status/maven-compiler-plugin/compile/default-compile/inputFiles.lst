@@ -16,7 +16,6 @@ D:\Programacao\Projetos\API\BackEnd Project\src\main\java\br\com\pz7systems\back
 D:\Programacao\Projetos\API\BackEnd Project\src\main\java\br\com\pz7systems\backendProject\BackEnd\Project\services\exceptions\DataIntegrityViolationException.java
 D:\Programacao\Projetos\API\BackEnd Project\src\main\java\br\com\pz7systems\backendProject\BackEnd\Project\view\resources\UserResource.java
 D:\Programacao\Projetos\API\BackEnd Project\src\main\java\br\com\pz7systems\backendProject\BackEnd\Project\repositories\UserRepository.java
-D:\Programacao\Projetos\API\BackEnd Project\src\main\java\br\com\pz7systems\backendProject\BackEnd\Project\domain\TesteClasss.java
 D:\Programacao\Projetos\API\BackEnd Project\src\main\java\br\com\pz7systems\backendProject\BackEnd\Project\services\exceptions\ResourceNotFoundException.java
 D:\Programacao\Projetos\API\BackEnd Project\src\main\java\br\com\pz7systems\backendProject\BackEnd\Project\view\model\BillResponse.java
 D:\Programacao\Projetos\API\BackEnd Project\src\main\java\br\com\pz7systems\backendProject\BackEnd\Project\shared\DTO\UserDTO.java
