@@ -1,10 +1,11 @@
-stages:
-  - build
+image: java:17-jdk
 
-build-java-project:
+build:
   stage: build
   script:
-    mvn package
-  artifacts:
-    paths:
-      - /home/gitlab-runner/
+    - mvn compile
+
+test:
+  stage: test
+  script:
+    - mvn clean test
