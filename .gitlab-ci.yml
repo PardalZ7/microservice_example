@@ -1,5 +1,9 @@
 image: openjdk:17-alpine
 
+stages:
+  - build
+  - deploy
+
 build:
   stage: build
   script:
