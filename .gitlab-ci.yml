@@ -6,11 +6,13 @@ stages:
   - deploy
 
 build:
+  image: maven:latest
   stage: build
   script:
     - mvn clean build
 
 test:
+  image: maven:latest
   stage: test
   script:
     - mvn test -B
