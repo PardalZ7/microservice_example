@@ -2,6 +2,7 @@ image: openjdk:17-alpine
 
 stages:
   - build
+  - test
   - deploy
 
 build:
@@ -9,7 +10,16 @@ build:
   script:
     - mvn clean build
 
+test:
+  stage: test
+  script:
+    - mvn test -B
+
 deploy:
   stage: deploy
   script:
-    - mvn compile
+    - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/microservice-simple-example.git
+    - git push -f heroku HEAD:main
+  environment:
+    name: staging
+    url: https://microservice-simple-example.herokuapp.com
